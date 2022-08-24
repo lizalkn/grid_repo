@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+   
+body{
+ margin: 0;
+ display: grid;
+  grid-template: 
+    "header header header header" 10em
+    "hero hero hero hero" 50vh
+    ". main sidebar ." auto
+    "footer footer footer footer" 10em 
+    / 1fr minmax(30em, 1fr) minmax(15em, 2fr) 1fr;
+  grid-column-gap: 1.5em;
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #252525;
+ 
+}
+@media screen and (min-width: 768px;){
+ body {
+  margin: 0;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(auto 5);
+  grid-column-gap: 1.5em;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: #252525;
+  
+}  
+}
+
+header {
+  grid-area: header;
+}
+
+
+main {
+  grid-area: main;
+  
+}
+
+aside {
+  grid-area: sidebar;
+  background:#e8e8e8;
+  padding: 2em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+footer {
+  grid-area: footer;
+}
+
+header,
+footer {
+  background:black;
+  color:yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Six Caps', sans-serif;
+  letter-spacing: 0.3em;
+  font-size: 2em;
+  
+}
+
+
+
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:'Six Caps', sans-serif;
+  letter-spacing: 0.3em;
+  font-size: 3.5em;
+  
+}
+.hero h1{
+    margin: 0;
+}
+ .hero p{
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.7em;
+    margin: 0;
+    letter-spacing: 0;
+   
+ }
+.card{
+    display: grid;
+    grid-gap:1.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    padding: 1.5em;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    grid-template: 
+     "img title"
+     "img content";
+    line-height: 1.6;
+
+}
+.card-img{
+    grid-area: img;
+}
+.card-title{
+    grid-area: title;
+    margin: 0;
+    font-weight: 400;
+
+   
+}
+.card-content{
+    grid-area:content;
+}
+a{
+    color:#e9d20f;
+}
