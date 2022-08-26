@@ -11,26 +11,13 @@ body{
     ". main sidebar ." auto
     "footer footer footer footer" 10em 
     / 1fr minmax(30em, 1fr) minmax(15em, 2fr) 1fr;
+    
   grid-column-gap: 1.5em;
   font-family: "Merriweather", serif;
   font-size: 1rem;
   font-weight: 300;
   color: #252525;
- 
-}
-@media screen and (min-width: 768px;){
- body {
-  margin: 0;
-  display: grid;
-  grid-template-columns:1fr;
-  grid-template-rows:repeat(auto 5);
-  grid-column-gap: 1.5em;
-  font-family: "Merriweather", serif;
-  font-weight: 300;
-  color: #252525;
-  
-}  
-}
+} 
 
 header {
   grid-area: header;
@@ -108,6 +95,7 @@ footer {
 }
 .card-img{
     grid-area: img;
+    max-width: 100%;
 }
 .card-title{
     grid-area: title;
@@ -122,3 +110,4 @@ footer {
 a{
     color:#e9d20f;
 }
+
